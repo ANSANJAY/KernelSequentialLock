@@ -4,8 +4,8 @@
   - **Double Sequence Number Check:**
     - Readers verify data consistency by checking the sequence number before and after data read 🔄🔢.
   - **Reading with Sequence Check:**
-    - If the sequence numbers before and after are equal and even, data is deemed consistent ✅.
-    - If they’re unequal or the pre-read number is odd, a write occurred, necessitating a re-read ⚠️🔄.
+    - If the sequence numbers before and after are **equal and even**, data is deemed consistent ✅.
+    - If they’re **unequal or the pre-read number is odd**, a write occurred, necessitating a re-read ⚠️🔄.
 
 ### 2. Curious Questions 🧐🔍
 
