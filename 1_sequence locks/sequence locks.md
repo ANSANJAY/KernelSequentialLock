@@ -1,11 +1,11 @@
 ### 1. Explain the Technical Concept 📘
 
 - **Sequence Locks (Seqlocks):**
-  - **Introduction:** Implemented in Linux 2.6, seqlocks aim to provide lock-free access to shared resources, optimizing particularly for read-heavy situations.
+  - **Introduction:** Implemented in Linux 2.6, seqlocks aim to provide **lock-free access** to shared resources, optimizing particularly for read-heavy situations.
   - **Key Features:**
-    - **Writer Priority:** Writers have a higher preference compared to readers, being allowed to modify data even when readers are in the critical section.
-    - **Handling Data Consistency:** Readers need to ensure data validity by themselves. If data changes (a write occurs) during a read, it’s considered invalid, and a re-read is necessary.
-    - **Write Identification:** A counter identifies write accesses, indicating to readers when the data has changed and needs validation.
+    - **Writer Priority:** Writers have a **higher preference** compared to readers, being allowed to modify data even when readers are in the critical section.
+    - **Handling Data Consistency:** Readers need to **ensure data validity** by themselves. If data changes (a write occurs) during a read, it’s considered invalid, and a re-read is necessary.
+    - **Write Identification:** A **counter** identifies write accesses, indicating to readers when the data has changed and needs validation.
     - **Writer Exclusivity:** Writers utilize a spinlock for mutual exclusion, ensuring that they do not interfere with each other.
   
 ### 2. Curious Questions 🤔🔍
